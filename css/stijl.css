@@ -1,119 +1,96 @@
+/* Algemene instellingen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  max-width: 850px;
-  margin: 40px auto;
-  padding: 30px;
-  background-color: #f8fafc;
-  color: #334155;
-  line-height: 1.7;
+    background-color: #0b112c; /* De donkerblauwe achtergrond van de site */
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Navigatiemenu bovenin de pagina */
-ul:first-of-type {
-  list-style-type: none;
-  margin: 0 0 35px 0;
-  padding: 8px 12px;
-  background-color: #0f172a;
-  display: flex;
-  gap: 8px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2);
+/* Header & Navigatie */
+header {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px 20px 20px;
 }
 
-ul:first-of-type li a {
-  display: block;
-  color: #f8fafc;
-  padding: 10px 18px;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.25s ease;
+.site-title {
+    font-size: 28px;
+    color: #93a2f3; /* Lichtblauwe kleur voor 'op onze website' */
+    margin-bottom: 15px;
 }
 
-ul:first-of-type li a:hover {
-  background-color: #0ea5e9;
-  color: #ffffff;
-  transform: translateY(-1px);
+.piaggio-welkom {
+    color: #003087; /* De officiële Piaggio blauwe kleur voor 'Welkom' */
 }
 
-/* Hoofdkop */
-h1 {
-  color: #0f172a;
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 15px;
-  letter-spacing: -0.5px;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Tussenkoppen met een moderne accentstreep links */
-h2 {
-  color: #1e293b;
-  font-size: 1.35rem;
-  margin-top: 35px;
-  margin-bottom: 15px;
-  padding-left: 12px;
-  border-left: 4px solid #0ea5e9;
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-/* Paragrafen en links in de tekst */
-p {
-  margin-bottom: 18px;
-  font-size: 1.05rem;
+nav ul li a:hover {
+    color: #93a2f3;
 }
 
-a {
-  color: #0284c7;
-  transition: color 0.2s ease;
+/* Centraal Vlak (De Kaart) */
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-a:hover {
-  color: #0369a1;
+.content-card {
+    background-color: #202744; /* Iets lichtere paars/blauwe kaart achtergrond */
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Afbeeldingen met afgeronde hoeken en zweef-effect */
-img {
-  max-width: 100%;
-  border-radius: 12px;
-  margin: 15px 0 25px 0;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.content-card h2 {
+    color: #93a2f3;
+    font-size: 26px;
+    margin-bottom: 25px;
 }
 
-img:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.15);
+/* Afbeelding */
+.image-container {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto 25px auto;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-/* Opsommingslijstjes in de tekst (zoals op de homepage) */
-ul:not(:first-of-type) {
-  background-color: #ffffff;
-  padding: 18px 20px 18px 40px;
-  border-radius: 10px;
-  border: 1px solid #e2e8f0;
-  margin: 15px 0 25px 0;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-ul:not(:first-of-type) li {
-  margin-bottom: 8px;
-  color: #334155;
-}
-
-/* Bronnenlijst onderaan */
-ol {
-  background-color: #ffffff;
-  padding: 18px 20px 18px 40px;
-  border-radius: 10px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
-}
-
-ol li {
-  margin-bottom: 8px;
-  color: #334155;
-}
-
-ol li a {
-  font-weight: 500;
+/* Onderschrift */
+.description {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.6;
 }
