@@ -1,37 +1,38 @@
-/* Algemene instellingen */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
 }
 
 body {
-    background-color: #0b112c; /* De donkerblauwe achtergrond van de site */
+    background-color: #0d122b; /* De donkerblauwe achtergrond */
     color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 30px 20px;
 }
 
-/* Header & Navigatie */
 header {
     width: 100%;
     text-align: center;
-    padding: 40px 20px 20px 20px;
+    margin-bottom: 50px;
 }
 
+/* De styling voor het losse woord Welkom */
 .site-title {
-    font-size: 28px;
-    color: #93a2f3; /* Lichtblauwe kleur voor 'op onze website' */
+    font-size: 36px; /* Iets groter gemaakt omdat het nu de hoofdrol heeft */
+    font-weight: bold;
     margin-bottom: 15px;
 }
 
 .piaggio-welkom {
-    color: #003087; /* De officiële Piaggio blauwe kleur voor 'Welkom' */
+    color: #003087; /* Het officiële Piaggio-blauw */
 }
 
+/* De witte menubalk */
 nav ul {
     list-style: none;
     display: flex;
@@ -43,41 +44,28 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #93a2f3;
-}
-
-/* Centraal Vlak (De Kaart) */
+/* Het centrale blok */
 .container {
     width: 100%;
-    max-width: 900px;
-    padding: 20px;
-    margin-top: 20px;
+    max-width: 800px;
 }
 
 .content-card {
-    background-color: #202744; /* Iets lichtere paars/blauwe kaart achtergrond */
+    background-color: #1f2540; /* Het centrale vlak uit je foto */
     border-radius: 12px;
-    padding: 40px;
+    padding: 50px 40px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.content-card h2 {
-    color: #93a2f3;
-    font-size: 26px;
-    margin-bottom: 25px;
-}
-
-/* Afbeelding */
+/* De afbeelding van de werkplek */
 .image-container {
     width: 100%;
-    max-width: 550px;
-    margin: 0 auto 25px auto;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -88,9 +76,9 @@ nav ul li a:hover {
     display: block;
 }
 
-/* Onderschrift */
+/* De witte tekst onderaan de kaart */
 .description {
-    color: #cccccc;
-    font-size: 14px;
-    line-height: 1.6;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.5;
 }
