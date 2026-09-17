@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Modellen - Piaggio Nederland</title>
+  <title>Piaggio Modellen</title>
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600;1,700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600;1,700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stijl.css">
 </head>
 <body>
@@ -23,44 +23,53 @@
 </nav>
 
 <main>
-  <h1>Modellen van Piaggio</h1>
-  <p>Piaggio heeft door de jaren heen veel verschillende en iconische scooters op de markt gebracht. Hieronder vind je meer informatie over een aantal van de bekendste modellen.</p>
-
-  <section class="cards">
-    <article class="card">
-      <img src="zip.avif" alt="Piaggio Zip" loading="lazy">
-      <div class="card-body">
-        <h2>Piaggio Zip</h2>
-        <p>Een van de meest verkochte scooters ooit. Licht, wendbaar en geliefd voor dagelijks gebruik in de stad.</p>
-      </div>
-    </article>
-    <article class="card">
-      <img src="skipper.jpg" alt="Piaggio Skipper" loading="lazy">
-      <div class="card-body">
-        <h2>Piaggio Skipper</h2>
-        <p>Bekend om zijn krachtige motor en sportieve uiterlijk. In de jaren '90 erg populair als snelle scooter.</p>
-      </div>
-    </article>
-    <article class="card">
-      <img src="typhoon.jpg" alt="Piaggio Typhoon" loading="lazy">
-      <div class="card-body">
-        <h2>Piaggio Typhoon</h2>
-        <p>Robuust ontwerp met brede banden — uitermate geschikt voor allerlei soorten wegdek.</p>
-      </div>
-    </article>
+  <section class="hero" style="text-align: center; padding: 40px 20px;">
+    <h1>Onze Modellen</h1>
+    <p class="lead">Klik op een van de onderstaande scooters om alle specificaties te bekijken.</p>
   </section>
 
-  <h2 class="section-title">Bronnen</h2>
-  <ol>
-    <li><a href="https://nl.wikipedia.org/wiki/Piaggio" target="_blank" rel="noopener noreferrer">Wikipedia: Piaggio</a></li>
-    <li><a href="https://www.piaggio.com" target="_blank" rel="noopener noreferrer">Officiële website van Piaggio</a></li>
-  </ol>
+  <!-- DE SCOOTER KAARTEN -->
+  <section class="features" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; padding: 20px;">
+    <article class="feature" onclick="openModal('zipModal')" style="cursor: pointer; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); max-width: 300px;">
+      <img src="zip.jpg" alt="Piaggio Zip" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+      <strong>Piaggio Zip</strong>
+      <p>Een van de meest verkochte scooters ooit...</p>
+    </article>
+
+    <article class="feature" onclick="openModal('skipperModal')" style="cursor: pointer; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); max-width: 300px;">
+      <img src="skipper.jpg" alt="Piaggio Skipper" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+      <strong>Piaggio Skipper</strong>
+      <p>Bekend om zijn krachtige motor...</p>
+    </article>
+
+    <article class="feature" onclick="openModal('typhoonModal')" style="cursor: pointer; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); max-width: 300px;">
+      <img src="typhoon.jpg" alt="Piaggio Typhoon" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+      <strong>Piaggio Typhoon</strong>
+      <p>Robuust ontwerp met brede banden...</p>
+    </article>
+  </section>
 </main>
 
+<!-- POP-UPS -->
+<div id="zipModal" class="modal">
+  <div class="modal-content"><span class="close-btn" onclick="closeModal('zipModal')">&times;</span><h2>Piaggio Zip Specs</h2><ul><li><strong>Cilinderinhoud:</strong> 49 cc</li><li><strong>Motortype:</strong> 4-takt</li></ul></div>
+</div>
+<div id="skipperModal" class="modal">
+  <div class="modal-content"><span class="close-btn" onclick="closeModal('skipperModal')">&times;</span><h2>Piaggio Skipper Specs</h2><ul><li><strong>Cilinderinhoud:</strong> 124 cc</li><li><strong>Motortype:</strong> 2-takt</li></ul></div>
+</div>
+<div id="typhoonModal" class="modal">
+  <div class="modal-content"><span class="close-btn" onclick="closeModal('typhoonModal')">&times;</span><h2>Piaggio Typhoon Specs</h2><ul><li><strong>Cilinderinhoud:</strong> 49 cc</li><li><strong>Motortype:</strong> 2-takt</li></ul></div>
+</div>
+
 <footer>
-  <strong>Piaggio Nederland</strong><br>
-  © 2026 Piaggio Nederland. Alle rechten voorbehouden.
+  <strong>Piaggio Nederland</strong><br>© 2026 Piaggio Nederland.
 </footer>
+
+<script>
+  function openModal(modalId) { document.getElementById(modalId).style.display = "flex"; }
+  function closeModal(modalId) { document.getElementById(modalId).style.display = "none"; }
+  window.onclick = function(event) { if (event.target.classList.contains('modal')) { event.target.style.display = "none"; } }
+</script>
 
 </body>
 </html>
