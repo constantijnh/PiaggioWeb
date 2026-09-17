@@ -25,40 +25,39 @@
 <main>
   <section class="hero" style="text-align: center; padding: 40px 20px;">
     <h1>Onze Modellen</h1>
-    <p class="lead">Klik op een van de onderstaande scooters om alle specificaties te bekijken.</p>
   </section>
 
   <!-- DE SCOOTER KAARTEN -->
   <section class="features" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; padding: 20px;">
     <article class="feature" onclick="openModal('zipModal')" style="cursor: pointer; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); max-width: 300px;">
-      <img src="zip.jpg" alt="Piaggio Zip" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+      <img src="zip.avif" alt="Piaggio Zip" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
       <strong>Piaggio Zip</strong>
-      <p>Een van de meest verkochte scooters ooit...</p>
+      <p>Een van de meest verkochte Piaggio scooter</p>
     </article>
 
     <article class="feature" onclick="openModal('skipperModal')" style="cursor: pointer; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); max-width: 300px;">
       <img src="skipper.jpg" alt="Piaggio Skipper" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
       <strong>Piaggio Skipper</strong>
-      <p>Bekend om zijn krachtige motor...</p>
+      <p>Bekend om zijn krachtige motor en snelle acceleratie</p>
     </article>
 
     <article class="feature" onclick="openModal('typhoonModal')" style="cursor: pointer; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); max-width: 300px;">
       <img src="typhoon.jpg" alt="Piaggio Typhoon" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
       <strong>Piaggio Typhoon</strong>
-      <p>Robuust ontwerp met brede banden...</p>
+      <p>Robuust ontwerp met brede banden voor offroad</p>
     </article>
   </section>
 </main>
 
 <!-- POP-UPS -->
 <div id="zipModal" class="modal">
-  <div class="modal-content"><span class="close-btn" onclick="closeModal('zipModal')">&times;</span><h2>Piaggio Zip Specs</h2><ul><li><strong>Cilinderinhoud:</strong> 49 cc</li><li><strong>Motortype:</strong> 4-takt</li></ul></div>
+  <div class="modal-content"><span class="close-btn" onclick="closeModal('zipModal')">&times;</span><h2>Piaggio Zip Specs</h2><ul><li><strong>Cilinderinhoud:</strong> 70 cc</li><li><strong>Motortype:</strong> 2-takt</li></ul></div>
 </div>
 <div id="skipperModal" class="modal">
-  <div class="modal-content"><span class="close-btn" onclick="closeModal('skipperModal')">&times;</span><h2>Piaggio Skipper Specs</h2><ul><li><strong>Cilinderinhoud:</strong> 124 cc</li><li><strong>Motortype:</strong> 2-takt</li></ul></div>
+  <div class="modal-content"><span class="close-btn" onclick="closeModal('skipperModal')">&times;</span><h2>Piaggio Skipper Specs</h2><ul><li><strong>Cilinderinhoud:</strong> 125 cc</li><li><strong>Motortype:</strong> 2-takt</li></ul></div>
 </div>
 <div id="typhoonModal" class="modal">
-  <div class="modal-content"><span class="close-btn" onclick="closeModal('typhoonModal')">&times;</span><h2>Piaggio Typhoon Specs</h2><ul><li><strong>Cilinderinhoud:</strong> 49 cc</li><li><strong>Motortype:</strong> 2-takt</li></ul></div>
+  <div class="modal-content"><span class="close-btn" onclick="closeModal('typhoonModal')">&times;</span><h2>Piaggio Typhoon Specs</h2><ul><li><strong>Cilinderinhoud:</strong> 70 cc</li><li><strong>Motortype:</strong> 2-takt</li></ul></div>
 </div>
 
 <footer>
