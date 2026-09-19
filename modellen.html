@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Modellen - Piaggio Nederland</title>
+  <meta name="description" content="De bekendste Piaggio-scooters op een rij: Zip, Skipper en Typhoon, met foto's en specificaties.">
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600;1,700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
@@ -11,48 +13,50 @@
 </head>
 <body>
 
-<nav class="nav-container">
+<a class="skip-link" href="#main">Naar de inhoud</a>
+
+<nav class="nav-container" aria-label="Hoofdmenu">
   <ul class="nav">
     <li class="brand"><span class="brand-text">Piaggio</span></li>
     <li><a href="index.html">Home</a></li>
-    <li><a href="modellen.html">Modellen</a></li>
+    <li><a href="modellen.html" aria-current="page">Modellen</a></li>
     <li><a href="overons.html">Over ons</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<main>
+<main id="main">
   <h1>Modellen van Piaggio</h1>
   <p>Piaggio heeft door de jaren heen veel verschillende en iconische scooters op de markt gebracht. Hieronder vind je meer informatie over een aantal van de bekendste modellen.</p>
 
   <section class="cards">
-    <!-- Piaggio Zip Kaart -->
+    <!-- Piaggio Zip -->
     <article class="card">
       <img src="zip.avif" alt="Piaggio Zip" loading="lazy">
       <div class="card-body">
         <h2>Piaggio Zip</h2>
         <p>Een van de meest verkochte scooters ooit. Licht, wendbaar en geliefd voor dagelijks gebruik in de stad.</p>
-        <button class="btn" onclick="openModal('zipModal')">Specificaties</button>
+        <button class="btn" type="button" data-open="zipModal" aria-haspopup="dialog">Specificaties</button>
       </div>
     </article>
 
-    <!-- Piaggio Skipper Kaart -->
+    <!-- Piaggio Skipper -->
     <article class="card">
       <img src="skipper.jpg" alt="Piaggio Skipper" loading="lazy">
       <div class="card-body">
         <h2>Piaggio Skipper</h2>
         <p>Bekend om zijn krachtige motor en sportieve uiterlijk. In de jaren '90 erg populair als snelle scooter.</p>
-        <button class="btn" onclick="openModal('skipperModal')">Specificaties</button>
+        <button class="btn" type="button" data-open="skipperModal" aria-haspopup="dialog">Specificaties</button>
       </div>
     </article>
 
-    <!-- Piaggio Typhoon Kaart -->
+    <!-- Piaggio Typhoon -->
     <article class="card">
       <img src="typhoon.png" alt="Piaggio Typhoon" loading="lazy">
       <div class="card-body">
         <h2>Piaggio Typhoon</h2>
         <p>Robuust ontwerp met brede banden — uitermate geschikt voor allerlei soorten wegdek.</p>
-        <button class="btn" onclick="openModal('typhoonModal')">Specificaties</button>
+        <button class="btn" type="button" data-open="typhoonModal" aria-haspopup="dialog">Specificaties</button>
       </div>
     </article>
   </section>
@@ -64,70 +68,73 @@
   </ol>
 </main>
 
-<!-- Modal: Piaggio Zip -->
-<div id="zipModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('zipModal')">&times;</span>
-    <h2>Piaggio Zip</h2>
-    <ul>
-      <li><strong>Cilinderinhoud:</strong> 70 cc</li>
-      <li><strong>Motortype:</strong> 2-takt</li>
-      <li><strong>Topsnelheid:</strong> 95 km/h</li>
-      <li><strong>Gewicht:</strong> 71 kg</li>
-      <li><strong>Bouwjaar:</strong> 1995</li>
-    </ul>
+<!-- Pop-up: Piaggio Zip -->
+<dialog id="zipModal" class="modal" aria-labelledby="zipTitle">
+  <div class="modal-inner">
+    <button class="close-btn" type="button" aria-label="Sluiten">&times;</button>
+    <h2 id="zipTitle">Piaggio Zip</h2>
+    <dl class="specs">
+      <div><dt>Cilinderinhoud</dt><dd>70 cc</dd></div>
+      <div><dt>Motortype</dt><dd>2-takt</dd></div>
+      <div><dt>Topsnelheid</dt><dd>95 km/h</dd></div>
+      <div><dt>Gewicht</dt><dd>71 kg</dd></div>
+      <div><dt>Bouwjaar</dt><dd>1995</dd></div>
+    </dl>
   </div>
-</div>
+</dialog>
 
-<!-- Modal: Piaggio Skipper -->
-<div id="skipperModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('skipperModal')">&times;</span>
-    <h2>Piaggio Skipper</h2>
-    <ul>
-      <li><strong>Cilinderinhoud:</strong> 125 cc</li>
-      <li><strong>Motortype:</strong> 2-takt</li>
-      <li><strong>Topsnelheid:</strong> 110 km/h</li>
-      <li><strong>Gewicht:</strong> 95 kg</li>
-      <li><strong>Bouwjaar:</strong> 1994</li>
-    </ul>
+<!-- Pop-up: Piaggio Skipper -->
+<dialog id="skipperModal" class="modal" aria-labelledby="skipperTitle">
+  <div class="modal-inner">
+    <button class="close-btn" type="button" aria-label="Sluiten">&times;</button>
+    <h2 id="skipperTitle">Piaggio Skipper</h2>
+    <dl class="specs">
+      <div><dt>Cilinderinhoud</dt><dd>125 cc</dd></div>
+      <div><dt>Motortype</dt><dd>2-takt</dd></div>
+      <div><dt>Topsnelheid</dt><dd>110 km/h</dd></div>
+      <div><dt>Gewicht</dt><dd>95 kg</dd></div>
+      <div><dt>Bouwjaar</dt><dd>1994</dd></div>
+    </dl>
   </div>
-</div>
+</dialog>
 
-<!-- Modal: Piaggio Typhoon -->
-<div id="typhoonModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('typhoonModal')">&times;</span>
-    <h2>Piaggio Typhoon</h2>
-    <ul>
-      <li><strong>Cilinderinhoud:</strong> 50 cc</li>
-      <li><strong>Motortype:</strong> 2-takt</li>
-      <li><strong>Topsnelheid:</strong> 85 km/h</li>
-      <li><strong>Gewicht:</strong> 81 kg</li>
-      <li><strong>Bouwjaar:</strong> 1993</li>
-    </ul>
+<!-- Pop-up: Piaggio Typhoon -->
+<dialog id="typhoonModal" class="modal" aria-labelledby="typhoonTitle">
+  <div class="modal-inner">
+    <button class="close-btn" type="button" aria-label="Sluiten">&times;</button>
+    <h2 id="typhoonTitle">Piaggio Typhoon</h2>
+    <dl class="specs">
+      <div><dt>Cilinderinhoud</dt><dd>50 cc</dd></div>
+      <div><dt>Motortype</dt><dd>2-takt</dd></div>
+      <div><dt>Topsnelheid</dt><dd>85 km/h</dd></div>
+      <div><dt>Gewicht</dt><dd>81 kg</dd></div>
+      <div><dt>Bouwjaar</dt><dd>1993</dd></div>
+    </dl>
   </div>
-</div>
+</dialog>
 
 <footer>
   <strong>Piaggio Nederland</strong><br>
-  Een onofficiële schoolproject-site over het Italiaanse merk Piaggio
+  © 2026 Piaggio Nederland. Alle rechten voorbehouden.
 </footer>
 
 <script>
-  function openModal(id) {
-    document.getElementById(id).style.display = "block";
-  }
+  // Openen: knoppen met data-open="<id van de dialog>"
+  document.querySelectorAll('[data-open]').forEach(function (knop) {
+    knop.addEventListener('click', function () {
+      document.getElementById(knop.dataset.open).showModal();
+    });
+  });
 
-  function closeModal(id) {
-    document.getElementById(id).style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-      event.target.style.display = "none";
-    }
-  }
+  // Sluiten: kruisje, klik naast de pop-up, of Escape (doet <dialog> zelf)
+  document.querySelectorAll('dialog.modal').forEach(function (dialog) {
+    dialog.querySelector('.close-btn').addEventListener('click', function () {
+      dialog.close();
+    });
+    dialog.addEventListener('click', function (event) {
+      if (event.target === dialog) dialog.close();
+    });
+  });
 </script>
 
 </body>
